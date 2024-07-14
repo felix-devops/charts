@@ -28,7 +28,7 @@ Issues and PRs related to the chart itself will be redirected to `bitnami/charts
   You should be able to access your new JasperReports installation through
 
   {{- range .Values.ingress.hosts }}
-  {{ if .tls }}https{{ else }}http{{ end }}://{{ .name }}/jasperserver/
+  {{ if .tls }}https{{ else }}http{{ end }}://{{ .host }}/jasperserver/
   {{- end }}
 
 {{- else if contains "NodePort" .Values.service.type }}
